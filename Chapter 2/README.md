@@ -1,4 +1,4 @@
-# Chapter 2
+# Chapter 2: Hello, Haskell!
 
 ### Parenthesization
 see ch2.hs

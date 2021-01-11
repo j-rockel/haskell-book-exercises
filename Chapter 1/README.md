@@ -1,4 +1,4 @@
-# Chapter 1
+# Chapter 1: All You Need Is Lambda
 
 ### Equivalence Exercises 
 
