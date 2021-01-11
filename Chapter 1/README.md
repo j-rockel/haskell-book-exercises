@@ -1,26 +1,34 @@
-## Chapter 1
+# Chapter 1
 
-# Equivalence Exercises 
+### Equivalence Exercises 
 
 1 - b
+
 2 - c
+
 3 - b
 
-# Combinators
+### Combinators
 
 1 - yes 
+
 2 - no, z is free
+
 3 - yes 
+
 4 - yes 
+
 5 - no, z is free
 
-# Normal form or diverge? 
+### Normal form or diverge? 
 
 1 - is in normal form 
+
 2 - diverges, this is equivalent to the omega term
+
 3 - has a normal form: (z z z)
 
-# Beta Reduce 
+### Beta Reduce 
 
 1: (\a b c -> c b a) z z (\w v -> w) --> (\b c -> c b z) z (\w v -> w) --> (\c -> c z z) (\w v -> w) --> (\w v -> w) z z --> (\v -> z) z --> z
 
