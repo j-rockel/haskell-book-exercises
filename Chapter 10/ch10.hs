@@ -27,3 +27,57 @@ seekritFunc x =
 -- 3. 
 seekritFuncMoreExact x =
     realToFrac (sum (map length (words x))) / realToFrac (length (words x))
+
+
+-- Rewriting functions using folds
+-- many of these are not pointfree, but i don't know how to improve them 
+
+-- 1.
+myOr :: [Bool] -> Bool
+myOr = foldl (||) False
+
+-- 2.
+myAny :: (a -> Bool) -> [a] -> Bool
+myAny f = foldr ((||) . f) False -- would like to make this myOr . map but it doesnt work for ??? reasons
+
+-- 3.
+myElem :: Eq a => a -> [a] -> Bool
+myElem x = foldr ((||) . (== x)) False
+
+-- 4. 
+myReverse :: [a] -> [a]
+myReverse = foldl (flip (:)) []
+
+-- 5. 
+myMap :: (a -> b) -> [a] -> [b]
+myMap f = foldr ((:) . f) []
+
+-- 6.
+myFilter :: (a -> Bool) -> [a] -> [a]
+myFilter f [] = []
+myFilter f (x:xs) = if f x then x : myFilter f xs else myFilter f xs
+
+myFilter' :: (a -> Bool) -> [a] -> [a]
+myFilter' f = foldr (\x -> if f x then (x :) else id) []
+
+-- 7. 
+squish :: [[a]] -> [a]
+squish = foldr (++) [] 
+
+-- 8.
+squishMap :: (a -> [b]) -> [a] -> [b]
+squishMap f = foldr ((++) . f) []
+
+-- 9. 
+squishAgain :: [[a]] -> [a]
+squishAgain = squishMap id
+
+-- 10. 
+myMaximumBy :: (a -> a -> Ordering) -> [a] -> a
+myMaximumBy f (x:xs) = foldl (pickLarger f) x xs where 
+    pickLarger f a b = if f a b == GT then a else b
+
+-- 11. 
+myMinimumBy :: (a -> a -> Ordering) -> [a] -> a
+myMinimumBy f (x:xs) = foldl (pickSmaller f) x xs where 
+    pickSmaller f a b = if f a b == LT then a else b
