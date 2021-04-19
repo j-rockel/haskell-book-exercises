@@ -23,3 +23,14 @@ capitalizeParagraph = unwords . (capitalizeSentences True) . words where
     capitalizeSentences _ [] = []
     capitalizeSentences True (x:xs) = (capitalizeWord x):(capitalizeSentences (last x == '.') xs)
     capitalizeSentences False (x:xs) = x:(capitalizeSentences (last x == '.') xs)
+
+-- Hutton's Razor
+data Expr = Lit Integer | Add Expr Expr
+
+eval :: Expr -> Integer
+eval (Lit x) = x
+eval (Add a b) = (eval a) + (eval b)
+
+printExpr :: Expr -> String
+printExpr (Lit x) = show x
+printExpr (Add a b) = (printExpr a) ++ " + " ++ (printExpr b)

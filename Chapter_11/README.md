@@ -17,3 +17,5 @@ see Ch11.hs
 
 ### Phone Exercise
 see Phone.hs
+
+### Hutton's Razor
