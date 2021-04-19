@@ -34,4 +34,4 @@ e -> b
 
 ### Building functions 
 
-see ch3.hs
+see Ch3.hs

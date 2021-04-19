@@ -1,7 +1,7 @@
 # Chapter 2: Hello, Haskell!
 
 ### Parenthesization
-see ch2.hs
+see Ch2.hs
 
 ### Equivalent expressions
 1 - yes 
@@ -14,7 +14,7 @@ see ch2.hs
 
 5 - no, because of operator precedence ( * before + )
 
-(verification see ch2.hs)
+(verification see Ch2.hs)
 
 ### More fun with functions
 
@@ -27,4 +27,4 @@ waxOn -> 1125,
 (-) 15 waxOn -> -1110,
 (-) waxOn 15 -> 1110
 
-see ch2.hs for the rest
+see Ch2.hs for the rest

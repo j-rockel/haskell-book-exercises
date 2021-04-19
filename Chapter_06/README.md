@@ -53,4 +53,4 @@
 11: doesn't work bc mySort is specific to Char
 
 ### Type-Kwon-Do Two: Electric Typealoo
-see ch6.hs
+see Ch6.hs

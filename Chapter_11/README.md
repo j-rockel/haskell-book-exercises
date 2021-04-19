@@ -1,4 +1,4 @@
-# Chapter 11: Algebraic Data Types
+# Chapter 11: Algebraic datatypes
 
 ### Multiple Choice
 1 -> a
@@ -13,4 +13,7 @@
 see Cipher.hs
 
 ### As-patterns
-see ch11.hs
+see Ch11.hs
+
+### Phone Exercise
+see Phone.hs

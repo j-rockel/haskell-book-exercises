@@ -45,13 +45,13 @@ go 1 2 7
 (7, 1)
 
 #### 2 & 3: 
-see ch8.hs
+see Ch8.hs
 
 ### Fixing dividedBy
-see ch8.hs
+see Ch8.hs
 
 ### McCarthy 91 function 
-see ch8.hs
+see Ch8.hs
 
 ### Numbers into words
 see WordNumber.hs

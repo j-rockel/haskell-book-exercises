@@ -23,4 +23,3 @@ capitalizeParagraph = unwords . (capitalizeSentences True) . words where
     capitalizeSentences _ [] = []
     capitalizeSentences True (x:xs) = (capitalizeWord x):(capitalizeSentences (last x == '.') xs)
     capitalizeSentences False (x:xs) = x:(capitalizeSentences (last x == '.') xs)
-

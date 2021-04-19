@@ -12,4 +12,4 @@
 5 -> a
 
 ### Let's write code
-see ch7.hs & Arith4.hs
+see Ch7.hs & Arith4.hs

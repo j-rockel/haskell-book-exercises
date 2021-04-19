@@ -33,10 +33,10 @@ d -> 5
 `(8 == 8) && 9` -> won't work bc 9 is not a `Bool`
 
 #### 8 - 10: 
-see ch4.hs
+see Ch4.hs
 
 ### Correcting Syntax
-see ch4.hs
+see Ch4.hs
 
 ### Match the function names to their types 
 1: `show` -> c) `Show a => a -> String`
