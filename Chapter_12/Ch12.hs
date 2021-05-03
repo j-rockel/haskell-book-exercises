@@ -59,3 +59,31 @@ mkWord s | otherwise = Just (Word' s)
 
 countConsonants :: String -> Int
 countConsonants = length . filter (not . isVowel)
+
+-- It's only Natural
+data Nat = Zero
+         | Succ Nat
+            deriving (Eq, Show) 
+
+-- >>> natToInteger Zero
+-- 0
+-- >>> natToInteger (Succ Zero)
+-- 1
+-- >>> natToInteger (Succ (Succ Zero))
+-- 2
+natToInteger :: Nat -> Integer
+natToInteger Zero = 0
+natToInteger (Succ n) = (natToInteger n) + 1
+
+-- >>> integerToNat 0
+-- Just Zero
+-- >>> integerToNat 1
+-- Just (Succ Zero)
+-- >>> integerToNat 2
+-- Just (Succ (Succ Zero))
+-- >>> integerToNat (-1)
+-- Nothing
+integerToNat :: Integer -> Maybe Nat
+integerToNat i | i < 0  = Nothing
+integerToNat i | i == 0 = Just Zero
+integerToNat i | i > 0  = integerToNat (i-1) >>= Just . Succ
